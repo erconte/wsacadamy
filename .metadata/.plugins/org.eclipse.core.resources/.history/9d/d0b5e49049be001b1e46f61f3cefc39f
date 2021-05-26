@@ -1,0 +1,36 @@
+package repeticao;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		
+		//String cargo = JOptionPane.showInputDialog("Qual o cargo: ").toUpperCase();
+		//String email = JOptionPane.showInputDialog("Email: ").toUpperCase();
+		//String produto = "";
+		//int qtde=0;
+		//float valor=0;
+		//float valorUni=0;
+		String func= "";
+		float cont=0;
+		float salario=0;
+		float somaSalario=0;
+		
+		do {
+			cont = salario;
+			String cargo = JOptionPane.showInputDialog("Qual o cargo: ").toUpperCase();
+			salario = Float.parseFloat(JOptionPane.showInputDialog("Salario: "));
+			//valorUni = Float.parseFloat(JOptionPane.showInputDialog("Valor Unitário: "));
+			//qtde = Integer.parseInt(JOptionPane.showInputDialog("Qtde: "));
+			//System.out.printf(nome + " o produto: %s na quantidade de: " + qtde + " com valor unitário de: " + valorUni + "\n" +
+			//" fica com o total de: " + (valorUni * qtde) ,produto);
+			somaSalario = (salario+cont);
+			System.out.println(cargo);
+			System.out.println(salario);
+			System.out.println(somaSalario);
+			
+		} while(JOptionPane.showConfirmDialog(
+				null, "Deseja adicionar algo?", "Funcionarios", JOptionPane.YES_NO_CANCEL_OPTION)==0);
+	}
+}

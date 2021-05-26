@@ -1,0 +1,22 @@
+package repeticao;
+
+import javax.swing.JOptionPane;
+
+public class ExemploFor {
+
+	public static void main(String[] args) {
+		
+		//int x = 0;
+		int valor = Integer.parseInt(JOptionPane.showInputDialog("Digite valor tabuada: "));
+		for (int cont=0; cont<101 cont++) {
+			System.out.println(cont*valor);
+		}
+		
+		/*
+		 * Sintaxe do for:
+		 * 1- Variável que vai contar
+		 * 2- Condição (até quando)
+		 * 3- Como ele vai contar?
+		 */
+	}
+}

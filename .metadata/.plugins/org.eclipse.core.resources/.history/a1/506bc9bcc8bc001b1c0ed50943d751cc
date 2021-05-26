@@ -1,0 +1,43 @@
+package variaveis;
+
+import javax.swing.JOptionPane;
+
+public class CalculoProduto {
+	/* Tipos Primitivos (TODOS aqueles que começam com letra minúscula)
+	 * boolean
+	 * char
+	 * byte
+	 * short
+	 * int
+	 * long
+	 * float
+	 * double
+	 */
+	
+	public static void main(String[] args) {
+		String produto = JOptionPane.showInputDialog("Produto: ");
+		int qtde = Integer.parseInt(JOptionPane.showInputDialog("Digite Qtde: "));
+		double valor = Double.parseDouble(JOptionPane.showInputDialog("Valor: "));
+		double total = (qtde * valor);
+		//double imposto = (total*0.17);
+		double totalimposto = (total*0.17+(total));
+		
+		System.out.println("Produto: " + produto);
+		System.out.println("Valor total: " + total);
+		System.out.println("Imposto: " + (total*0.17));
+		System.out.println("Valor total com imposto: " + totalimposto);
+	
+		/*
+		 * Capturem:
+		 * -nome do produto
+		 * qtde do produto
+		 * valor do produto
+		 * exibir no final:
+		 * -nome do produto
+		 * -valor total
+		 * -valor do imposto (17% sobre o valor total)
+		 */
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package repeticao;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		
+		String nome = JOptionPane.showInputDialog("Digite noome: ").toUpperCase();
+		String email = JOptionPane.showInputDialog("Digite e-mail: ").toLowerCase();
+		String produto = "";
+		int qtde = 0;
+		float valor = 0;
+		
+		do {
+			produto = JOptionPane.showInputDialog("Nome do produto: ");
+			qtde = Integer.parseInt(JOptionPane.showInputDialog("Nome do produto: "));
+			valor = Integer.parseInt(JOptionPane.showInputDialog("Valor: "));
+			
+		} while(JOptionPane.showConfirmDialog(
+			null, "Deseja adicionar protudos?", "Compras", JOptionPane.YES_NO_CANCEL_OPTION)==0);
+	}
+}

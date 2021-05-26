@@ -1,0 +1,30 @@
+package decisao;
+
+import javax.swing.JOptionPane;
+
+public class DecisaoSimplesDesafio {
+	public static void main(String[] args) {
+		
+		/*
+		 * Capture nome de pessoa e idade
+		 * De acordo com as leis eleitorais apresente uma das msgs abaixo:
+		 * - Voto obrigatório
+		 * - Voto facultativo
+		 * - Você não pode votar
+		 * 
+		 */
+		
+		String nome = JOptionPane.showInputDialog("Disciplina: ").toUpperCase();
+		int idade = Integer.parseInt(JOptionPane.showInputDialog("Idade: "));
+		
+		if(idade > 16) {
+			System.out.println("O seu voto é obrigatório");
+		}
+		else {
+			System.out.println("Você não pode votar");
+		}
+		
+		
+		
+}
+}

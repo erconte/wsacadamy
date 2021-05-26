@@ -1,0 +1,21 @@
+package decisao;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio2 {
+	public static void main(String[] args) {
+		
+		int diarias = Integer.parseInt(JOptionPane.showInputDialog("diarias: "));
+		int valor = Integer.parseInt(JOptionPane.showInputDialog("valor: "));
+		float taxa = 0;
+		
+		if (diarias > 10) {
+			//taxa = ((5 / 100) + valor);
+			taxa = (float) 0.05;
+			System.out.println("O valor da diária é: " + (diarias*valor*(taxa)));
+		} else if (diarias >= 5 && diarias <= 10) {
+			taxa = (float) 0.08; //((8 / 100) + valor);
+			System.out.println("O valor da diária é: " + (diarias*valor)*taxa);
+		}
+	}
+}

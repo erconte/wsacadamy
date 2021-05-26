@@ -1,0 +1,17 @@
+package decisao;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio3 {
+	public static void main(String[] args) {
+	
+		String nome = JOptionPane.showInputDialog("nome: ").toUpperCase();
+		float salario = Short.parseShort(JOptionPane.showInputDialog("salário: "));
+		short faltas = Short.parseShort(JOptionPane.showInputDialog("faltas: "));
+		if (faltas == 0) {
+			salario = salario * 100 / 2;
+		} else {
+			System.out.println( nome + " o seu salário é : " + salario);
+		}
+}
+}

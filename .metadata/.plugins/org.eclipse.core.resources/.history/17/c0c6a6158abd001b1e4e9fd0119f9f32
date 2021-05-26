@@ -1,0 +1,30 @@
+package decisao;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio3 {
+	public static void main(String[] args) {
+	
+		String nome = JOptionPane.showInputDialog("nome: ").toUpperCase();
+		float salarioBruto = Short.parseShort(JOptionPane.showInputDialog("salário: "));
+		float salario = 0;
+		short faltas = Short.parseShort(JOptionPane.showInputDialog("faltas: "));
+		if (faltas == 0) {
+			salario = salarioBruto * (float) 0.2;
+			salarioBruto = salario + salarioBruto;
+		} else {
+			if (salarioBruto > 1100) {
+				System.out.println("O salário total é: " + (salarioBruto * (float) 0.075));
+			}		
+		}
+}
+}
+		/*
+		 * Exercicio 3:
+		 * Receba o valor do salário bruto, o nome de um colaborador e 
+		 * a qtde de faltas.
+		 * Se não houver faltas o salario bruto receberá um aumento de 2%.
+		 * Calcule o valor do INSS sobre o salário bruto.
+		 * Exiba no final o salário bruto, e o salário liquido (retirando
+		 * o INSS e 8% do FGTS)
+		 */
