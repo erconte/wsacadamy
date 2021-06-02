@@ -9,7 +9,7 @@ public class TesteElevador {
 	public static void main(String[] args) {
 		
 		//String pessoas = "";
-		boolean pessoas=false;
+		//boolean pessoas=false;
 		//1° Instanciar Objeto
 		Elevador objeto = new Elevador (); // instancia um objeto (pegou do molde e criou um objeto na memória)
 		
