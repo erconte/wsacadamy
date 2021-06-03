@@ -1,6 +1,15 @@
 package br.com.unixyz.modelo;
 
 public class Endereco {
+
+	private String logradouro;
+	private String numero;
+	private String complemento;
+	private String bairro;
+	private String cidade;
+	private String uf;
+	private String cep;
+	
 	public Endereco() {
 		super();
 	}
@@ -15,16 +24,6 @@ public class Endereco {
 		this.uf = uf;
 		this.cep = cep;
 	}
-	
-	
-	private String logradouro;
-	private String numero;
-	private String complemento;
-	private String bairro;
-	private String cidade;
-	private String uf;
-	private String cep;
-	
 	@Override
 	public String toString() {
 		return "Endereco  [logradouro=" + logradouro + ", numero=" + numero + ", complemento=" + complemento

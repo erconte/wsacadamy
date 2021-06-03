@@ -7,15 +7,17 @@ public class Turma {
 	private String sala;
 	private Professor professor;
 	private Curso curso;
-	public Turma(String sigla, String periodo, String sala, Professor professor, Curso curso) {
+	private Aluno aluno;
+	
+	public Turma(String sigla, String periodo, String sala, Professor professor, Curso curso, Aluno aluno) {
 		super();
 		this.sigla = sigla;
 		this.periodo = periodo;
 		this.sala = sala;
 		this.professor = professor;
 		this.curso = curso;
+		this.aluno = aluno;
 	}
-	private Aluno aluno;
 	public Turma() {
 		super();
 	}
@@ -55,6 +57,12 @@ public class Turma {
 	public void setAluno(Aluno aluno) {
 		this.aluno = aluno;
 	}
+	@Override
+	public String toString() {
+		return "Turma [sigla=" + sigla + ", periodo=" + periodo + ", sala=" + sala + ", professor=" + professor
+				+ ", curso=" + curso + ", aluno=" + aluno + "]";
+	}
+	
 	
 	
 	

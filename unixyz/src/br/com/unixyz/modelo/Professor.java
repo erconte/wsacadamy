@@ -47,6 +47,11 @@ public class Professor {
 	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
+	@Override
+	public String toString() {
+		return " Professor [nomeHorario=" + nomeHorario + ", formacao=" + formacao + ", cargaHoraria=" + cargaHoraria
+				+ ", valorHora=" + valorHora + ", endereco=" + endereco + "]";
+	}
 	
 	
 }
