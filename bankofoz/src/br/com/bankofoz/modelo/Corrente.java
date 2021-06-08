@@ -1,15 +1,22 @@
 package br.com.bankofoz.modelo;
+/*Nas classes filhas Cuidad:
+- construtor cheio
+- toString ()
+*/
 
 public class Corrente extends Conta{
 	private double limite;
 	private double taxa;
 	
-	
-	
+	public Corrente(int numero, double saldo, Cliente cliente, Agencia agencia, double limite, double taxa) {
+		super(numero, saldo, cliente, agencia);
+		this.limite = limite;
+		this.taxa = taxa;
+	}
 
 	@Override
 	public String toString() {
-		return "Corrente [limite=" + limite + ", taxa=" + taxa + "]";
+		return "Corrente [\nlimite=" + limite + "\ntaxa=" + taxa + "\ntoString()=" + super.toString() + "]";
 	}
 
 	public double getLimite() {
@@ -39,18 +46,21 @@ public class Corrente extends Conta{
 	}
 
 	public boolean sacar (double valor) {
-		if (valor - super.getSaldo() <= 0) {
-			return false;
-		}else 
+		double resultado = limite+ super.getSaldo();
+		if (resultado >= valor) {
 			super.setSaldo(super.getSaldo()-valor);
 			return true;
+		}else 
+			return false;
 	}
 
 	public double getSaldo( ) {
 		return limite + super.getSaldo();
 	}
+
 	public String getResumo() {
-		return "Taxa= " + taxa +  "Saldo= " + super.getSaldo() + " Cliente= " + super.getCliente();
+		return "Limite: " + limite + "\nTaxa= " + taxa +
+				"\nSaldo= " + super.getSaldo() + "\nCliente= " + super.getCliente();
 	}
 	
 }

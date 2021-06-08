@@ -35,7 +35,8 @@ public class Conta {
 	}
 	@Override
 	public String toString() {
-		return "Conta [numero=" + numero + ", saldo=" + saldo + ", cliente=" + cliente + ", agencia=" + agencia + "]";
+		return "Conta [\nnumero=" + numero + "\nsaldo=" + saldo + "\nCliente=" + cliente + 
+				"\nAgencia=" + agencia + "]";
 	}
 	public Conta() {
 		super();
@@ -48,21 +49,23 @@ public class Conta {
 		this.agencia = agencia;
 	}
 	public boolean sacar(double valor) {
-		Magica.b("Deseja sacar?");
-		if (saldo <= 0) {
+		if (valor<=saldo) {
+			saldo-=valor;
+			return true;
+		} else {
 			return false;
-		} else
-			saldo = saldo - valor;
-		return true;
+		}
+			
 	}
 	public boolean depositar(double valor) {
-		if (valor < 0) {
+		if (valor <= 0) {
 			return false;
 		} else
 			saldo = saldo + valor;
 			return true;
 	}
+	
 	public String getResumo() {
-		return cliente.getNome() + saldo;
+		return "Cliente: " + cliente.getNome() + " Saldo: " + saldo;
 	}
 }
