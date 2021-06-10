@@ -1,11 +1,17 @@
 package br.com.projetofinal.modelo;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name="TB_ARTISTA")
@@ -24,6 +30,16 @@ public class Artista {
 	@Column(name="estilo", length=30)
 	private String estilo;
 	
+	@JsonIgnoreProperties("artista")
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="artista")
+	private List<Musica> musicas;
+	
+	public List<Musica> getMusicas() {
+		return musicas;
+	}
+	public void setMusicas(List<Musica> musicas) {
+		this.musicas = musicas;
+	}
 	public int getId() {
 		return id;
 	}
@@ -48,12 +64,13 @@ public class Artista {
 	public void setEstilo(String estilo) {
 		this.estilo = estilo;
 	}
-	public Artista(int id, String nomeArtistico, String nacionalidade, String estilo) {
+	public Artista(int id, String nomeArtistico, String nacionalidade, String estilo, List<Musica> musicas) {
 		super();
 		this.id = id;
 		this.nomeArtistico = nomeArtistico;
 		this.nacionalidade = nacionalidade;
 		this.estilo = estilo;
+		this.musicas = musicas;
 	}
 	public Artista() {
 		super();
